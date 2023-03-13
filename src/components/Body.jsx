@@ -1,3 +1,7 @@
+import styled from "styled-components";
+
+
+
 function Body(){
     return(
         <body>
