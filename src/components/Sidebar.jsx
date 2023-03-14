@@ -33,7 +33,7 @@ function Sidebar(){
             <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
             <ButtonStyled borderColor="blue">Bonsoir</ButtonStyled>
             <br/>
-            <ButtonStyled>Bonjour</ButtonStyled>
+            <ButtonStyled onClick={()=>console.log("Tu viens de cliquer sur le bouton bonjour")}>Bonjour</ButtonStyled>
         </SidebarStyled>
     )
 }
