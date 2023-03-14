@@ -20,13 +20,20 @@ const LinkSidebarStyled = styled.a`
     display: block;
 `
 
+const ButtonStyled = styled.button`
+    padding: 2px 5px;
+    border-radius: 3px;
+    border: 1px solid ${props => props.borderColor ? props.borderColor : "palevioletred"};
+`
+
 function Sidebar(){
     return(
         <SidebarStyled>
             <LinkSidebarStyled href="/" >lien 1</LinkSidebarStyled>
             <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
-            <LinkSidebarStyled href="/" >lien 3</LinkSidebarStyled>
-            <LinkSidebarStyled href="/" >lien 4</LinkSidebarStyled>
+            <ButtonStyled borderColor="blue">Bonsoir</ButtonStyled>
+            <br/>
+            <ButtonStyled>Bonjour</ButtonStyled>
         </SidebarStyled>
     )
 }
