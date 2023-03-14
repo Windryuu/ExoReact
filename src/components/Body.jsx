@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 function Body(){
     return(
-        <body>
+        
             <div>
                 this is the app body
             </div>
-        </body>
+        
     )
 }
 

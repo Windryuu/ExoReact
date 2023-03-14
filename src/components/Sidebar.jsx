@@ -1,4 +1,27 @@
 import styled from "styled-components";
+// import { ConsoleLogger } from "../App";
+
+function Sidebar(props){
+    const superConsoleLoggerRef = props.sclr;
+    const aaa = props.parentfunction;
+    return(
+        <SidebarStyled>
+            <LinkSidebarStyled href="/" >lien 1</LinkSidebarStyled>
+            <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
+            <ButtonStyled borderColor="blue" 
+            // onClick={ConsoleLogger}
+            >Bonsoir</ButtonStyled>
+            <br/>
+            <button onClick={()=> superConsoleLoggerRef.current.DubConsoleLogger()}>BLOOP</button>
+            <br/>
+            <button onClick={aaa}>BLOOP troisième</button>
+            <br/>
+            <ButtonStyled onClick={()=>console.log("Tu viens de cliquer sur le bouton bonjour")}>Bonjour</ButtonStyled>
+        </SidebarStyled>
+    )
+}
+
+export default Sidebar;
 
 const SidebarStyled = styled.div`
     height: 100%;
@@ -25,17 +48,3 @@ const ButtonStyled = styled.button`
     border-radius: 3px;
     border: 1px solid ${props => props.borderColor ? props.borderColor : "palevioletred"};
 `
-
-function Sidebar(){
-    return(
-        <SidebarStyled>
-            <LinkSidebarStyled href="/" >lien 1</LinkSidebarStyled>
-            <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
-            <ButtonStyled borderColor="blue">Bonsoir</ButtonStyled>
-            <br/>
-            <ButtonStyled onClick={()=>console.log("Tu viens de cliquer sur le bouton bonjour")}>Bonjour</ButtonStyled>
-        </SidebarStyled>
-    )
-}
-
-export default Sidebar;
