@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderStyled = styled.header`
     background-color: brown;
-    height: 50px;
+    height: 80px;
 `
 
 function Header(props){

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 // import { ConsoleLogger } from "../App";
 
@@ -7,7 +8,8 @@ function Sidebar(props){
     return(
         <SidebarStyled>
             <LinkSidebarStyled href="/" >lien 1</LinkSidebarStyled>
-            <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
+            <LinkSidebarStyled href="/bleep" >lien 2</LinkSidebarStyled>
+            {/* <Link to="/">No reload 1</Link> */}
             <ButtonStyled borderColor="blue" 
             // onClick={ConsoleLogger}
             >Bonsoir</ButtonStyled>
