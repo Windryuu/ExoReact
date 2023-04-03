@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AtomicButtonStyled from "../atoms/AtomicButtonStyled";
 // import { ConsoleLogger } from "../App";
 
 function Sidebar(props){
@@ -7,16 +8,14 @@ function Sidebar(props){
     return(
         <SidebarStyled>
             <LinkSidebarStyled href="/" >lien 1</LinkSidebarStyled>
-            <LinkSidebarStyled href="/" >lien 2</LinkSidebarStyled>
-            <ButtonStyled borderColor="blue" 
-            // onClick={ConsoleLogger}
-            >Bonsoir</ButtonStyled>
+            <LinkSidebarStyled href="/bleep" >lien 2</LinkSidebarStyled>
+            <AtomicButtonStyled borderColor="blue" textButton="bonsoir"></AtomicButtonStyled>
             <br/>
             <button onClick={()=> superConsoleLoggerRef.current.DubConsoleLogger()}>BLOOP</button>
             <br/>
             <button onClick={aaa}>BLOOP troisième</button>
             <br/>
-            <ButtonStyled onClick={()=>console.log("Tu viens de cliquer sur le bouton bonjour")}>Bonjour</ButtonStyled>
+            <AtomicButtonStyled onClick={()=>console.log("Tu viens de cliquer sur le bouton bonjour")} textButton="Bonjour"></AtomicButtonStyled>
         </SidebarStyled>
     )
 }
@@ -41,10 +40,4 @@ const LinkSidebarStyled = styled.a`
     font-size: 25px;
     color: #ad0d0d;
     display: block;
-`
-
-const ButtonStyled = styled.button`
-    padding: 2px 5px;
-    border-radius: 3px;
-    border: 1px solid ${props => props.borderColor ? props.borderColor : "palevioletred"};
 `
