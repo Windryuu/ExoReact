@@ -1,4 +1,5 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import MoleculeCardItem from "../molecules/MoleculeCardItem";
 
 const router = createBrowserRouter([
     {
@@ -9,19 +10,18 @@ const router = createBrowserRouter([
     },
     {
         path: "/bleep",
-        element: <div>bleep bleep tête de bleep</div>
+        element: <div>bleep bleep tête de bleep
+                    <MoleculeCardItem imageSource="fruit4.png"></MoleculeCardItem>
+                    <MoleculeCardItem imageSource="fruit4.png" textButton="+"></MoleculeCardItem>
+                    <MoleculeCardItem imageSource="fruit4.png" textButton="+" buttonWidth="50px"></MoleculeCardItem>
+                </div>
     }
 ])
 
 function Body(){
     return(
         <RouterProvider router={router}> 
-            <div>
-                
-                <br />
-                this is the app body
-                 
-            </div>
+            <div></div>
         </RouterProvider>
     )
 }
